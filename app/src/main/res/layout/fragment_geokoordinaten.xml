@@ -24,7 +24,6 @@
             		 android:layout_width="wrap_content"
                      android:layout_height="wrap_content"
             		 android:text="@string/radiobutton_west" />
-
     </RadioGroup>
     
     <EditText android:id="@+id/edittext_geograph_laenge"        
@@ -35,7 +34,7 @@
         	  android:layout_alignBottom="@id/radioButtonGruppeOstOderWest" 
         	  android:layout_alignParentRight="true" 
         	  android:layout_marginLeft="5dp"
-        	  android:hint="@string/edittext_hint_dezimalgrad_laenge"
+        	  android:hint="@string/edittext_hint_geolaenge"
         	  android:inputType="numberDecimal"  />
         
     
@@ -71,7 +70,7 @@
 		      android:layout_alignBottom="@id/radioButtonGruppeNordOderSued" 
 		      android:layout_alignParentRight="true" 
 		      android:layout_marginLeft="5dp"
-		      android:hint="@string/edittext_hint_dezimalgrad_breite"
+		      android:hint="@string/edittext_hint_geobreite"
 		      android:inputType="numberDecimal"  />
 
     
