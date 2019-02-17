@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent" 
+			    android:background="#80FFA500" >    
+
+				
+    <RadioGroup android:id="@+id/radioButtonGruppeOstOderWest"        
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:paddingRight="15dp"
+        		android:layout_alignParentTop="true"
+        		android:layout_alignParentLeft="true"
+        		android:padding="10dp"
+        		android:background="#FFFF00"
+        		android:orientation="vertical" >
+
+        <RadioButton android:id="@+id/radio_ost"            
+            		 android:layout_width="wrap_content"
+            		 android:layout_height="wrap_content"
+            		 android:text="@string/radiobutton_ost" />
+
+        <RadioButton android:id="@+id/radio_west"            
+            		 android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+            		 android:text="@string/radiobutton_west" />
+
+    </RadioGroup>
+    
+    <EditText android:id="@+id/edittext_geograph_laenge"        
+        	  android:layout_width="wrap_content"
+        	  android:layout_height="wrap_content" 
+        	  android:layout_toRightOf="@id/radioButtonGruppeOstOderWest" 
+        	  android:layout_alignTop="@id/radioButtonGruppeOstOderWest"
+        	  android:layout_alignBottom="@id/radioButtonGruppeOstOderWest" 
+        	  android:layout_alignParentRight="true" 
+        	  android:layout_marginLeft="5dp"
+        	  android:hint="@string/edittext_hint_dezimalgrad_laenge"
+        	  android:inputType="numberDecimal"  />
+        
+    
+    <!-- Jetzt kommt die zweite "Zeile" für die Wahl des Breitengrads -->
+    
+    <RadioGroup android:id="@+id/radioButtonGruppeNordOderSued"        
+        	    android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/radioButtonGruppeOstOderWest"
+                android:layout_alignParentLeft="true"
+                android:layout_alignRight="@id/radioButtonGruppeOstOderWest"
+                android:padding="10dp"
+                android:background="#80FF00"
+                android:orientation="vertical" >
+
+        <RadioButton android:id="@+id/radio_nord"            
+            	     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/radiobutton_nord" />
+
+        <RadioButton android:id="@+id/radio_sued"            
+            		 android:layout_width="wrap_content"
+            	     android:layout_height="wrap_content"
+            	     android:text="@string/radiobutton_sued" />
+
+    </RadioGroup>
+    
+    <EditText android:id="@+id/edittext_geograph_breite"        
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content" 
+		      android:layout_toRightOf="@id/radioButtonGruppeNordOderSued" 
+		      android:layout_alignTop="@id/radioButtonGruppeNordOderSued"
+		      android:layout_alignBottom="@id/radioButtonGruppeNordOderSued" 
+		      android:layout_alignParentRight="true" 
+		      android:layout_marginLeft="5dp"
+		      android:hint="@string/edittext_hint_dezimalgrad_breite"
+		      android:inputType="numberDecimal"  />
+
+    
+    <!-- Jetzt noch eine Zeile mit Buttons -->
+    <Button android:id="@+id/button_reset_koordinate"        
+			android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+	        android:layout_below="@id/edittext_geograph_breite"
+	        android:layout_marginTop="5dp"
+	        android:layout_alignParentLeft="true" 
+	        android:text="@string/button_reset_koordinate" />
+    
+    <Button android:id="@+id/button_kartenansicht"        
+			android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"
+        	android:layout_alignTop="@id/button_reset_koordinate"
+        	android:layout_toRightOf="@id/button_reset_koordinate" 
+        	android:text="@string/button_kartenansicht" />
+    
+    <Button android:id="@+id/button_koordinate_zufall"        
+			android:layout_width="wrap_content"
+        	android:layout_height="wrap_content"        
+        	android:layout_alignParentRight="true"
+        	android:layout_alignTop="@id/button_kartenansicht"
+        	android:layout_toRightOf="@id/button_kartenansicht" 
+        	android:text="@string/button_zufalls_koordinate" />
+    
+</RelativeLayout>
+
