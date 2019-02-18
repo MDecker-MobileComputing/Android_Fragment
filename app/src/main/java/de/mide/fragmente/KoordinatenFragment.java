@@ -56,12 +56,12 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 
 	
 	/** 
-	 * Layout-Datei für Fragment mit Inflater laden und View daraus erzeugen.
+	 * Layout-Datei für Fragment mit Inflater "aufblasen" und View daraus erzeugen.
 	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, 
-                                 ViewGroup container,
-                                 Bundle savedInstanceState) {
+                             ViewGroup      container,
+                             Bundle         savedInstanceState) {
 						
 		return inflater.inflate(R.layout.fragment_geokoordinaten, container, false);		
 	}
@@ -222,6 +222,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 			startActivity(intent);
 			
 		} else {
+
 			_kartenansichtButton.setEnabled(false);
 			zeigeToast("Die Koordinate kann leider nicht dargestellt werden, weil keine Karten-App zur Verfügung steht.");
 		}
@@ -336,9 +337,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	 *         gewählt ist.
 	 */
 	public Location getLocation() {
-		
-		 Location location = null;
-		
+
 		 if (checkKoordinaten() == false) { return null; }
 		 
 		 try {
@@ -356,7 +355,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 			 }			 
 			 
 			 // Eigentliches Erzeugen des Location-Objektes
-			 location = new Location("dummy-provider");
+             Location location = new Location("dummy-provider");
 			 location.setLatitude (geoBreite);
 			 location.setLongitude(geoLaenge);
 			 return location;			 
