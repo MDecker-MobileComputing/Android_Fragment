@@ -68,7 +68,7 @@ public class EntfernungVonBerlinActivity extends FragmentActivity implements OnC
 		if (view == _berechnungDurchfuehrenButton) {
 
 			Location locationEingegeben = _koordinatenFragment.getLocation();
-			if (locationEingegeben == null) return; // noch keine zulässige Koordinate eingegeben
+			if (locationEingegeben == null) { return; } // noch keine zulässige Koordinate eingegeben
 
 			// Eigentliche Entfernungs-Berechnung durchführen
 			double distanzMeter = locationEingegeben.distanceTo(_berlinLocation);

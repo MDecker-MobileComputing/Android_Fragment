@@ -63,10 +63,10 @@ public class EntfernungZweiKoordinatenActivity extends FragmentActivity implemen
 		if (view == _berechnungDurchfuehrenButton) {
 			
 			Location location1 = _koordinatenFragment1.getLocation();
-			if (location1 == null) return;
+			if (location1 == null) { return; }
 			
 			Location location2 = _koordinatenFragment2.getLocation();
-			if (location2 == null) return;
+			if (location2 == null) { return; }
 			
 			double distanzMeter = location1.distanceTo(location2);
 			

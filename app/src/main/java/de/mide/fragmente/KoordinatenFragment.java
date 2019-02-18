@@ -47,7 +47,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	/** UI-Element zur Eingabe der geographischen Länge. */
 	protected EditText _geoLaengeEditText = null;
 
-        /** UI-Element zur Eingabe der geographischen Breite. */
+	/** UI-Element zur Eingabe der geographischen Breite. */
 	protected EditText _geoBreiteEditText = null;
 	
 	protected Button _resetButton         = null;
@@ -260,13 +260,12 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	protected HimmelsrichtungEnum getOstOderWest() {
 		
 		int idOfSelectedButton = _ostOderWestRadioGroup.getCheckedRadioButtonId();
+
+		if (idOfSelectedButton == -1) { return HimmelsrichtungEnum.UNBEKANNT; }
 		
+		if (idOfSelectedButton == _ostRadioButton.getId() ) { return HimmelsrichtungEnum.OSTEN; }
 		
-		if (idOfSelectedButton == -1) return HimmelsrichtungEnum.UNBEKANNT;
-		
-		if (idOfSelectedButton == _ostRadioButton.getId()) return HimmelsrichtungEnum.OSTEN;
-		
-		if (idOfSelectedButton == _westRadioButton.getId()) return HimmelsrichtungEnum.WESTEN;
+		if (idOfSelectedButton == _westRadioButton.getId()) { return HimmelsrichtungEnum.WESTEN; }
 				
 		Log.e(TAG4LOGGING, "Unerwarteter RadioButton für Ost/West gewählt");
 		
@@ -283,11 +282,11 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 		
 		int idOfSelectedButton = _nordOderSuedRadioGroup.getCheckedRadioButtonId();
 		
-		if (idOfSelectedButton == -1) return HimmelsrichtungEnum.UNBEKANNT;
+		if (idOfSelectedButton == -1) { return HimmelsrichtungEnum.UNBEKANNT; }
 		
-		if (idOfSelectedButton == _nordRadioButton.getId() ) return HimmelsrichtungEnum.NORDEN;
+		if (idOfSelectedButton == _nordRadioButton.getId() ) { return HimmelsrichtungEnum.NORDEN; }
 		
-		if (idOfSelectedButton == _suedRadioButton.getId() ) return HimmelsrichtungEnum.SUEDEN;
+		if (idOfSelectedButton == _suedRadioButton.getId() ) { return HimmelsrichtungEnum.SUEDEN; }
 				
 		
 		Log.e(TAG4LOGGING, "Unerwarteter RadioButton für Nord/Süd gewählt");
