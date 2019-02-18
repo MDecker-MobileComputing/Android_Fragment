@@ -172,6 +172,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 		
 		
 		// *** Überprüfungen für geog. Breite ***
+
 		geoKoordStr = _geoBreiteEditText.getText().toString().trim();
 		if (geoKoordStr.length() == 0) {
 			zeigeToast("Kein Wert für geographische Breite eingegeben.");
@@ -205,7 +206,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	 */
 	protected void oeffneKartenansicht() {
 
-		if (checkKoordinaten() == false) return; // wenn aktuell keine zulässigen Koordinaten eingegeben sind, dann brechen wir ab
+		if (checkKoordinaten() == false) { return; } // wenn aktuell keine zulässigen Koordinaten eingegeben sind, dann brechen wir ab
 				
 		// URI mit darzustellender Koordinate bilden, z.B. "geo:49.014,8.4043"
 		String uriString = "geo:" + _geoBreiteEditText.getText() + "," + _geoLaengeEditText.getText();
@@ -301,12 +302,12 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 		
 		Random random = new Random(); // Zufalls-Generator
 		
-		// Geographische Länge zw. 0.0 und 180.0 Grad
+		// Geographische Länge zwischen 0.0 und 180.0 Grad
 		double koordinate = random.nextInt(1801) / 10.0;
 		_geoLaengeEditText.setText( koordinate + "");
 
 		
-		// Geogr. Breite zw. 0.0 und 90.0 Grad
+		// Geographische Breite zwischen 0.0 und 90.0 Grad
 		koordinate = random.nextInt(901) / 10.0;
 		_geoBreiteEditText.setText( koordinate + "");
 		
@@ -338,7 +339,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 		
 		 Location location = null;
 		
-		 if (checkKoordinaten() == false) return null;
+		 if (checkKoordinaten() == false) { return null; }
 		 
 		 try {
 			 

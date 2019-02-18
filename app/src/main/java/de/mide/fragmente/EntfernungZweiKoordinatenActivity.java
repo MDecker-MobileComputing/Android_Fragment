@@ -49,7 +49,6 @@ public class EntfernungZweiKoordinatenActivity extends FragmentActivity implemen
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		_koordinatenFragment1 = (KoordinatenFragment) fragmentManager.findFragmentById(R.id.fragment_koordinate_1);
 		_koordinatenFragment2 = (KoordinatenFragment) fragmentManager.findFragmentById(R.id.fragment_koordinate_2);
-
 	}
 
 	
@@ -82,7 +81,6 @@ public class EntfernungZweiKoordinatenActivity extends FragmentActivity implemen
 			
 		} else
 			Log.w(MainActivity.TAG4LOGGING, "Unerwartetes UI-Element hat Event-Handler aufgerufen: " + view);
-		
 	}
 
 	
