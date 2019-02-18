@@ -47,22 +47,21 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	/** UI-Element zur Eingabe der geographischen Länge. */
 	protected EditText _geoLaengeEditText = null;
 
-    /** UI-Element zur Eingabe der geographischen Breite. */
+        /** UI-Element zur Eingabe der geographischen Breite. */
 	protected EditText _geoBreiteEditText = null;
 	
 	protected Button _resetButton         = null;
 	protected Button _kartenansichtButton = null;
 	protected Button _zufallsButton       = null;
-	
-	
+
 	
 	/** 
 	 * Layout-Datei für Fragment mit Inflater laden und View daraus erzeugen.
 	 */
 	@Override
 	public View onCreateView(LayoutInflater inflater, 
-			                 ViewGroup container,
-							 Bundle savedInstanceState) {
+                                 ViewGroup container,
+                                 Bundle savedInstanceState) {
 						
 		return inflater.inflate(R.layout.fragment_geokoordinaten, container, false);		
 	}
@@ -134,7 +133,6 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 
 			Log.w(TAG4LOGGING, "Event-Handler von unerwartetem UI-Element ausgelöst: " + view);
 		}
-				
 	}
 
 	
@@ -208,18 +206,17 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	protected void oeffneKartenansicht() {
 
 		if (checkKoordinaten() == false) return; // wenn aktuell keine zulässigen Koordinaten eingegeben sind, dann brechen wir ab
-		
-		
+				
 		// URI mit darzustellender Koordinate bilden, z.B. "geo:49.014,8.4043"
 		String uriString = "geo:" + _geoBreiteEditText.getText() + "," + _geoLaengeEditText.getText();
 		
-		Uri uri = Uri.parse(uriString); 
+		Uri    uri    = Uri.parse(uriString); 
 		Intent intent = new Intent(Intent.ACTION_VIEW);				
 		intent.setData(uri);
 		
 		
 		// Überprüfen, ob auf dem Android-Gerät überhaupt eine Karten-App zur Verfügung steht.
-		if (wirdIntentUnterstuetzt(intent)) {
+		if ( wirdIntentUnterstuetzt(intent) ) {
 			
 			startActivity(intent);
 			
@@ -268,9 +265,9 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 		if (idOfSelectedButton == _ostRadioButton.getId()) return HimmelsrichtungEnum.OSTEN;
 		
 		if (idOfSelectedButton == _westRadioButton.getId()) return HimmelsrichtungEnum.WESTEN;
-		
-		
+				
 		Log.e(TAG4LOGGING, "Unerwarteter RadioButton für Ost/West gewählt");
+		
 		return HimmelsrichtungEnum.UNBEKANNT;
 	}
 	
@@ -315,15 +312,17 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 		
 		
 		// Himmelsrichtungen auswürfeln
-		if (random.nextBoolean())
+		if (random.nextBoolean()) {
 			_ostRadioButton.setChecked(true);
-		else
+		} else {
 			_westRadioButton.setChecked(true);
+		}
 		
-		if (random.nextBoolean())
-			_nordRadioButton.setChecked(true);
-		else
+		if (random.nextBoolean()) {
+			_nordRadioButton.setChecked(true);			
+		} else {
 			_suedRadioButton.setChecked(true);
+		}
 	}
 	
 	
@@ -345,21 +344,21 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 			 
 			 String geoLaengeStr = _geoLaengeEditText.getText().toString().trim();
 			 double geoLaenge = Double.parseDouble(geoLaengeStr);
-			 if (getOstOderWest() == HimmelsrichtungEnum.WESTEN) // "Westlich" wird durch negatives Vorzeichen dargestellt
+			 if (getOstOderWest() == HimmelsrichtungEnum.WESTEN) { // "Westlich" wird durch negatives Vorzeichen dargestellt
 				 geoLaenge = -geoLaenge;
+			 }
 			 
 			 String geoBreiteStr = _geoBreiteEditText.getText().toString().trim();
 			 double geoBreite = Double.parseDouble(geoBreiteStr);
-			 if (getNordOderSued() == HimmelsrichtungEnum.SUEDEN)
+			 if (getNordOderSued() == HimmelsrichtungEnum.SUEDEN) {
 				 geoBreite = -geoBreite;
-			 
+			 }			 
 			 
 			 // Eigentliches Erzeugen des Location-Objektes
 			 location = new Location("dummy-provider");
 			 location.setLatitude (geoBreite);
 			 location.setLongitude(geoLaenge);
-			 return location;
-			 
+			 return location;			 
 		 }
 		 catch (Exception ex) {
 			 Log.e(TAG4LOGGING, "Exception beim Auslesen der Koordianten aufgetreten: " + ex.getMessage());
