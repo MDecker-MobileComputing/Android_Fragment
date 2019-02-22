@@ -5,14 +5,14 @@
     android:layout_height="match_parent" >
 
     <fragment
-		android:id="@+id/fragment_koordinate"
+	android:id="@+id/fragment_koordinate"
         android:name="de.mide.fragmente.KoordinatenFragment"
     	android:layout_width="match_parent"
     	android:layout_height="wrap_content"
     	android:layout_marginTop="5dp"  />
 
     <Button
-		android:id="@+id/button_berechne_entfernung_zu_berlin"
+	android:id="@+id/button_berechne_entfernung_zu_berlin"
         android:layout_width="match_parent"
     	android:layout_height="wrap_content"
     	android:layout_marginTop="10dp"
