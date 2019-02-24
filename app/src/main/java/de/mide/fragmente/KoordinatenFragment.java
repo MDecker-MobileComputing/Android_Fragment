@@ -30,18 +30,29 @@ import android.widget.Toast;
  * This file is licensed under the terms of the BSD 3-Clause License.
  */
 public class KoordinatenFragment extends Fragment implements OnClickListener {
-	
+
+    protected static final String TAG4LOGGING = "KoordinatenFragment";
+
+
 	/** Eigener Aufzählungstyp für die vier Himmelsrichtungen. */
 	public enum HimmelsrichtungEnum { NORDEN, OSTEN, SUEDEN, WESTEN, UNBEKANNT };
 
-	protected static final String TAG4LOGGING = "KoordinatenFragment";
-		
+	/** RadioGruppe zur Auswahl der Himmelsrichtung für die geographische Länge (östlich oder westlich). */
 	protected RadioGroup _ostOderWestRadioGroup  = null;
+
+    /** RadioGruppe zur Auswahl der Himmelsrichtung für der geographische Breite (nördlich oder südlich). */
 	protected RadioGroup _nordOderSuedRadioGroup = null;
-	
+
+	/** RadioButton für "östlich". */
 	protected RadioButton _ostRadioButton  = null;
+
+    /** RadioButton für "westlich". */
 	protected RadioButton _westRadioButton = null;
+
+	/** RadioButton für "nördlich". */
 	protected RadioButton _nordRadioButton = null;
+
+	/** RadioButton für "südlich". */
 	protected RadioButton _suedRadioButton = null;
 	
 	/** UI-Element zur Eingabe der geographischen Länge. */
@@ -49,10 +60,15 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 
 	/** UI-Element zur Eingabe der geographischen Breite. */
 	protected EditText _geoBreiteEditText = null;
-	
-	protected Button _resetButton         = null;
+
+	/** Button um die Eingabefelder zurückzusetzen. */
+	protected Button _resetButton = null;
+
+	/** Button um aktuell eingegebene Koordinate über einen impliziten Intent anzuzeigen (z.B. in Google Maps). */
 	protected Button _kartenansichtButton = null;
-	protected Button _zufallsButton       = null;
+
+	/** Button um Zufallskoordinaten einzutragen. */
+	protected Button _zufallsButton = null;
 
 	
 	/** 
