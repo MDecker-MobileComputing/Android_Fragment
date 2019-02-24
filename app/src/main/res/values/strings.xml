@@ -20,8 +20,8 @@
     <string name="radiobutton_nord">Nord</string>
     <string name="radiobutton_sued">Süd</string>
     
-    <string name="edittext_hint_geobreite">Geographische Breite</string>
-    <string name="edittext_hint_geolaenge">Geographische Länge</string>
+    <string name="edittext_hint_geobreite">Geograph. Breite</string>
+    <string name="edittext_hint_geolaenge">Geograph. Länge</string>
     
     <string name="button_reset_koordinate"  >Zurücksetzen</string>
     <string name="button_kartenansicht"     >Kartenansicht</string>
