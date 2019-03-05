@@ -40,13 +40,13 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	/** RadioGruppe zur Auswahl der Himmelsrichtung für die geographische Länge (östlich oder westlich). */
 	protected RadioGroup _ostOderWestRadioGroup  = null;
 
-    /** RadioGruppe zur Auswahl der Himmelsrichtung für der geographische Breite (nördlich oder südlich). */
+        /** RadioGruppe zur Auswahl der Himmelsrichtung für der geographische Breite (nördlich oder südlich). */
 	protected RadioGroup _nordOderSuedRadioGroup = null;
 
 	/** RadioButton für "östlich". */
 	protected RadioButton _ostRadioButton  = null;
 
-    /** RadioButton für "westlich". */
+        /** RadioButton für "westlich". */
 	protected RadioButton _westRadioButton = null;
 
 	/** RadioButton für "nördlich". */
