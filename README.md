@@ -12,6 +12,10 @@ Identifiers (names for classes, variables and methods), UI text and (JavaDoc) co
 
 <br>
 
+See also [this repository](https://github.com/MDecker-MobileComputing/Android_Kalorienrechner) for another example on how to use fragments in an Android app.
+
+<br>
+
 ----
 ## Screenshots
 
