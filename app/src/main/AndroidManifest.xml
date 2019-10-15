@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="de.mide.fragmente"
           android:installLocation="auto"
-          android:versionCode="11"
-          android:versionName="1.10 (Februar 2019)" >
+          android:versionCode="12"
+          android:versionName="1.11 (Oktober 2019)" >
 
 
     <application android:allowBackup="true"
