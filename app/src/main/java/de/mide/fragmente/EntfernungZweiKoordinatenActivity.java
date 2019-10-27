@@ -71,16 +71,20 @@ public class EntfernungZweiKoordinatenActivity extends FragmentActivity implemen
 			double distanzMeter = location1.distanceTo(location2);
 			
 			if (distanzMeter < 1000) {
+
 				long distanzGerundet = Math.round(distanzMeter);
 				zeigeToast("Entfernung: " + distanzGerundet + " m");
 			}
 			else {
+
 				long distanzGerundet = Math.round(distanzMeter/1000.0);
 				zeigeToast("Entfernung: " + distanzGerundet + " km");
 			}			
 			
-		} else
+		} else {
+
 			Log.w(MainActivity.TAG4LOGGING, "Unerwartetes UI-Element hat Event-Handler aufgerufen: " + view);
+        }
 	}
 
 	

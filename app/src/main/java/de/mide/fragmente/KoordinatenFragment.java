@@ -372,14 +372,14 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 			 String geoLaengeStr = _geoLaengeEditText.getText().toString().trim();
 			 double geoLaenge = Double.parseDouble(geoLaengeStr);
 			 if (getOstOderWest() == HimmelsrichtungEnum.WESTEN) { // "Westlich" wird durch negatives Vorzeichen dargestellt
-             
+
 				 geoLaenge = -geoLaenge;
 			 }
 
 			 String geoBreiteStr = _geoBreiteEditText.getText().toString().trim();
 			 double geoBreite = Double.parseDouble(geoBreiteStr);
 			 if (getNordOderSued() == HimmelsrichtungEnum.SUEDEN) {
-                 
+
 				 geoBreite = -geoBreite;
 			 }
 
@@ -390,6 +390,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 			 return location;
 		 }
 		 catch (Exception ex) {
+
 			 Log.e(TAG4LOGGING, "Exception beim Auslesen der Koordianten aufgetreten: " + ex.getMessage());
 			 return null;
 		 }

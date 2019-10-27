@@ -74,17 +74,21 @@ public class EntfernungVonBerlinActivity extends FragmentActivity implements OnC
 			double distanzMeter = locationEingegeben.distanceTo(_berlinLocation);
 
 			if (distanzMeter <= 1000) {
+
 				long distanzGerundet = Math.round(distanzMeter);
 				zeigeToast("Entfernung nach Berlin: " + distanzGerundet + " m");
 			}
 			else {
+
 				long distanzGerundet = Math.round(distanzMeter/1000.0);
 				zeigeToast("Entfernung nach Berlin: " + distanzGerundet + " km");
 			}
 
-		} else
+		} else {
+
 			Log.w(MainActivity.TAG4LOGGING,
 				  "Unerwartetes UI-Element hat Event-Handler-Methode in EntfernungVonBerlinActivity aufgerufen: " + view);
+        }
 	}
 
 

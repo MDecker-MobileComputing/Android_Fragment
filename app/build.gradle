@@ -6,7 +6,7 @@ android {
     defaultConfig {
         applicationId "de.mide.fragmente"
         minSdkVersion 17
-        targetSdkVersion 28
+        targetSdkVersion 29
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
