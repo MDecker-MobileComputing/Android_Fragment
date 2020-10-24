@@ -33,7 +33,6 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 
     protected static final String TAG4LOGGING = "KoordinatenFragment";
 
-
 	/** Eigener Aufzählungstyp für die vier Himmelsrichtungen. */
 	public enum HimmelsrichtungEnum { NORDEN, OSTEN, SUEDEN, WESTEN, UNBEKANNT };
 
