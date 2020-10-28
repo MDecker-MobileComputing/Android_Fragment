@@ -39,13 +39,13 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	/** RadioGruppe zur Auswahl der Himmelsrichtung für die geographische Länge (östlich oder westlich). */
 	protected RadioGroup _ostOderWestRadioGroup  = null;
 
-        /** RadioGruppe zur Auswahl der Himmelsrichtung für der geographische Breite (nördlich oder südlich). */
+	/** RadioGruppe zur Auswahl der Himmelsrichtung für der geographische Breite (nördlich oder südlich). */
 	protected RadioGroup _nordOderSuedRadioGroup = null;
 
 	/** RadioButton für "östlich". */
 	protected RadioButton _ostRadioButton  = null;
 
-        /** RadioButton für "westlich". */
+	/** RadioButton für "westlich". */
 	protected RadioButton _westRadioButton = null;
 
 	/** RadioButton für "nördlich". */
@@ -87,8 +87,8 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	 * speichern. Es wird auch die Fragment-Instanz als Event-Listener
 	 * für die Buttons registriert.
 	 *
-	 * @param view Referenz auf View-Objekt, das von Methode <i>onCreateView()</i>
-	 *             mit Inflater erstellt und mit return zurückgegeben wurde.
+	 * @param view  Referenz auf View-Objekt, das von Methode <i>onCreateView()</i>
+	 *              mit Inflater erstellt und mit return zurückgegeben wurde.
 	 */
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -126,7 +126,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	 * Einzige Methode aus Interface {@link OnClickListener},
 	 * EventHandler für Buttons.
 	 *
-	 * @param view UI-Element, welches das Event ausgelöst hat (sollte Button sein).
+	 * @param view  UI-Element, welches das Event ausgelöst hat (sollte Button sein).
 	 */
 	@Override
 	public void onClick(View view) {
@@ -152,10 +152,9 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 
 
 	/**
-	 * Methode gibt nur dann {@code true} zurück, wenn aktuell
-	 * gültige Koordinaten eingegeben sind.
-	 * überprüft z.B., ob für geographische Länge eingegebener Wert
-	 * tatsächlich im Bereich von 0 und 180 ist.
+	 * Methode gibt nur dann {@code true} zurück, wenn aktuell gültige Koordinaten eingegeben sind.
+	 * Überprüft z.B., ob für geographische Länge eingegebener Wert tatsächlich im Bereich von 0
+	 * und 180 ist.
 	 *
 	 * Wenn etwas nicht stimmt, dann wird dies in einem Toast ausgegeben
 	 * (der Toast zeigt aber nur den ersten gefundenen Fehler an).
@@ -212,22 +211,21 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 			return false;
 		}
 
-
 		// Wenn wir bisher gekommen sind, dann wurden alle Tests bestanden und die Eingabe ist zulässig
 		return true;
 	}
 
 
 	/**
-	 * Methode versucht aktuellen Koordinaten in einer Karten-App
-	 * (z.B. GoogleMaps) per impliziten Intent zu öffnen.
-	 * Es wird überprüft, ob eine Karten-App zur Verfügung steht; wenn nicht,
+	 * Methode versucht aktuellen Koordinaten in einer Karten-App (z.B. GoogleMaps) per impliziten
+	 * Intent zu öffnen. Es wird überprüft, ob eine Karten-App zur Verfügung steht; wenn nicht,
 	 * dann wird eine Fehlermeldung per Toast ausgegeben und der entsprechende
 	 * Button deaktiviert. Siehe hierzu auch Beispiel-App "Android_ImplizitIntentDemo".
 	 */
 	protected void oeffneKartenansicht() {
 
-		if (checkKoordinaten() == false) { return; } // wenn aktuell keine zulässigen Koordinaten eingegeben sind, dann brechen wir ab
+		// wenn aktuell keine zulässigen Koordinaten eingegeben sind, dann brechen wir ab
+		if (checkKoordinaten() == false) { return; }
 
 		// URI mit darzustellender Koordinate bilden, z.B. "geo:49.014,8.4043"
 		String uriString = "geo:" + _geoBreiteEditText.getText() + "," + _geoLaengeEditText.getText();
@@ -254,13 +252,13 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	 * Prüfen, ob es für den als Parameter übergebenen Intent mindestens
 	 * eine passende Zielkomponente gibt.
 	 *
-	 * @param intent Intent, für den überprüft werden soll, ob er
-	 *               vom aktuellen Android-System ausgeführt werden kann
-	 *               (d.h. es gibt mindestens eine App/Komponente,
+	 * @param intent  Intent, für den überprüft werden soll, ob er
+	 *                vom aktuellen Android-System ausgeführt werden kann
+	 *                (d.h. es gibt mindestens eine App/Komponente,
 	 *                die ihn verarbeiten kann).
 	 *
-	 * @return {@code true}, wenn es mindestens einen Receiver gibt,
-	 *         der Intent also unterstützt wird.
+	 * @return  {@code true}, wenn es mindestens einen Receiver gibt,
+	 *          der Intent also unterstützt wird.
 	 */
 	protected boolean wirdIntentUnterstuetzt(Intent intent) {
 
@@ -274,9 +272,9 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 
 
 	/**
-	 * Abfragen der Himmelsrichtung für geogr. Länge.
+	 * Abfragen der Himmelsrichtung für geographische Länge.
 	 *
-	 * @return Ost, West oder Unbekannt (wenn noch nichts ausgewählt).
+	 * @return  Ost, West oder Unbekannt (wenn noch nichts ausgewählt).
 	 */
 	protected HimmelsrichtungEnum getOstOderWest() {
 
@@ -297,7 +295,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	/**
 	 * Abfragen der Himmelsrichtung für die geograpische Breite.
 	 *
-	 * @return Nord, Süd oder Unbekannt (wenn noch nichts ausgewählt).
+	 * @return  Nord, Süd oder Unbekannt (wenn noch nichts ausgewählt).
 	 */
 	public HimmelsrichtungEnum getNordOderSued() {
 
@@ -358,9 +356,8 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	 * Methode, mit der "von außen" die mit diesem Fragment
 	 * derzeit eingestellte Koordinate abgefragt werden kann.
 	 *
-	 * @return "Offizielles" Location-Objekt der Android-API, das z.B. auch für GPS-Ortung verwendet wird;
-	 *         gibt {@code null} zurück, wenn derzeit keine zulässige Koordinate
-	 *         gewählt ist.
+	 * @return  "Offizielles" Location-Objekt der Android-API, das z.B. auch für GPS-Ortung verwendet wird;
+	 *          gibt {@code null} zurück, wenn derzeit keine zulässige Koordinate gewählt ist.
 	 */
 	public Location getLocation() {
 
@@ -399,7 +396,7 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 	/**
 	 * Toast-Objekt mit langer Dauer erscheinen lassen.
 	 *
-	 * @param nachricht Text, der mit dem Toast ausgegeben werden soll.
+	 * @param nachricht  Text, der mit dem Toast ausgegeben werden soll.
 	 */
 	protected void zeigeToast(String nachricht) {
 
