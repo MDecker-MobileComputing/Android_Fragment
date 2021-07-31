@@ -19,13 +19,13 @@ import android.widget.Toast;
 public class EntfernungVonBerlinActivity extends FragmentActivity implements OnClickListener {
 
     /** Fragment zur Eingabe einer geographischen Koordinate. */
-	protected KoordinatenFragment _koordinatenFragment = null;
+    protected KoordinatenFragment _koordinatenFragment = null;
 
-	/** Button zum Start der Berechnung. */
-	protected Button _berechnungDurchfuehrenButton = null;
-
+    /** Button zum Start der Berechnung. */
+    protected Button _berechnungDurchfuehrenButton = null;
+	
     /** Objekt mit den Koordinaten von Berlin. */
-	protected Location _berlinLocation = null;
+    protected Location _berlinLocation = null;
 
 
 	/**
