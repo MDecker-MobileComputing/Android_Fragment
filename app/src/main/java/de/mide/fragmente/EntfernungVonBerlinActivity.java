@@ -24,9 +24,6 @@ public class EntfernungVonBerlinActivity extends FragmentActivity implements OnC
     /** Button zum Start der Berechnung. */
     protected Button _berechnungDurchfuehrenButton = null;
 
-    /** Button zum Start der Berechnung. */
-    protected Button _berechnungDurchfuehrenButton = null;
-	
     /** Objekt mit den Koordinaten von Berlin. */
     protected Location _berlinLocation = null;
 
