@@ -10,7 +10,7 @@ import android.location.Location;
 import android.net.Uri;
 import android.os.Bundle;
 
-import android.support.v4.app.Fragment;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +21,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 
 /**
