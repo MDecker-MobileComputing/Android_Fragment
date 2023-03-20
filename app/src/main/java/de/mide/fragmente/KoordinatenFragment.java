@@ -326,11 +326,9 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
         double koordinate = random.nextInt(1801) / 10.0;
         _geoLaengeEditText.setText( koordinate + "");
 
-
         // Geographische Breite zwischen 0.0 und 90.0 Grad
         koordinate = random.nextInt(901) / 10.0;
         _geoBreiteEditText.setText( koordinate + "");
-
 
         // Himmelsrichtungen auswürfeln
         if (random.nextBoolean()) {
