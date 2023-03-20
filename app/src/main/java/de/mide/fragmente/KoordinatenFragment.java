@@ -309,7 +309,6 @@ public class KoordinatenFragment extends Fragment implements OnClickListener {
 
         if (idOfSelectedButton == _suedRadioButton.getId() ) { return HimmelsrichtungEnum.SUEDEN; }
 
-
         Log.e(TAG4LOGGING, "Unerwarteter RadioButton für Nord/Süd gewählt");
         return HimmelsrichtungEnum.UNBEKANNT;
     }
