@@ -1,5 +1,7 @@
 # Android-App "Fragments" #
 
+<br>
+
 Simple Android app that shows how to use [fragments](https://developer.android.com/guide/components/fragments). 
 Fragments are re-usable UI components consisting of several view elements.
 The fragment in this example is for entering one geographic coordinate (e.g. 51.507222° North and 0.1275° West for
@@ -20,6 +22,8 @@ another example on how to use fragments in an Android app.
 
 ## Screenshots ##
 
+<br>
+
 ![Screenshot 1](screenshot_1.png)  ![Screenshot 2](screenshot_2.png)
 
 ![Screenshot 3](screenshot_3.png)
@@ -34,4 +38,8 @@ The screenshots were taken from the app running in the Android SDK's emulator.
 
 ## License ##
 
+<br>
+
 See the [LICENSE file](LICENSE.md) for license rights and limitations (BSD 3-Clause License).
+
+<br>
