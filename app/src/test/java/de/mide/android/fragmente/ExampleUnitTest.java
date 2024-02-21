@@ -1,4 +1,4 @@
-package de.mide.fragmente;
+package de.mide.android.fragmente;
 
 import org.junit.Test;
 

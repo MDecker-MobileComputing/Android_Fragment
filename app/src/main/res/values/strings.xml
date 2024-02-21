@@ -5,26 +5,26 @@
 
     <string name="activity_title_entfernung_berlin"             >Entfernung nach Berlin berechnen</string>
     <string name="activity_title_entfernung_zwischen_zwei_koord">Entfernung zwischen zwei Koordinaten</string>
-    
-    
+
+
     <!-- Strings für MainActivity -->
     <string name="button_entfernung_zu_berlin"                 >Berechne Entfernung nach Berlin</string>
     <string name="button_entfernung_zwischen_zwei_koordinaten" >Berechne Entfernung zwischen zwei Orten</string>
-    
+
     <string name="button_berechnung_durchfuehren">Berechnung durchführen</string>
-    
-    
+
+
     <!-- Von Fragment verwendete Strings -->
     <string name="radiobutton_ost" >Ost</string>
     <string name="radiobutton_west">West</string>
     <string name="radiobutton_nord">Nord</string>
     <string name="radiobutton_sued">Süd</string>
-    
+
     <string name="edittext_hint_geobreite">Geograph. Breite</string>
     <string name="edittext_hint_geolaenge">Geograph. Länge</string>
-    
+
     <string name="button_reset_koordinate"  >Zurücksetzen</string>
     <string name="button_kartenansicht"     >Kartenansicht</string>
     <string name="button_zufalls_koordinate">Zufallswert</string>
-    
+
 </resources>

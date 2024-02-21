@@ -9,8 +9,9 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FragmentDemo"
+        android:theme="@style/Theme.Fragmente"
         tools:targetApi="31">
 
         <activity
@@ -22,10 +23,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="de.mide.fragmente.EntfernungVonBerlinActivity"
+        <activity android:name="de.mide.android.fragmente.EntfernungVonBerlinActivity"
             android:label="@string/activity_title_entfernung_berlin"     />
 
-        <activity android:name="de.mide.fragmente.EntfernungZweiKoordinatenActivity"
+        <activity android:name="de.mide.android.fragmente.EntfernungZweiKoordinatenActivity"
             android:label="@string/activity_title_entfernung_zwischen_zwei_koord" />
 
     </application>
