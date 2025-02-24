@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+
 /**
  * Diese Activity dient zur Berechnung der Entfernung der mit EINER Instanz
  * des Fragments eingegebenen Koordinate zu Berlin.<br><br>
