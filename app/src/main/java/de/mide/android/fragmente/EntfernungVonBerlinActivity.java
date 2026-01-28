@@ -2,7 +2,8 @@ package de.mide.android.fragmente;
 
 import android.location.Location;
 import android.os.Bundle;
-import androidx.fragment.app.FragmentActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +18,7 @@ import android.widget.Toast;
  *
  * This file is licensed under the terms of the BSD 3-Clause License.
  */
-public class EntfernungVonBerlinActivity extends FragmentActivity implements OnClickListener {
+public class EntfernungVonBerlinActivity extends AppCompatActivity implements OnClickListener {
 
     /** Fragment zur Eingabe einer geographischen Koordinate. */
     protected KoordinatenFragment _koordinatenFragment = null;
@@ -40,7 +41,6 @@ public class EntfernungVonBerlinActivity extends FragmentActivity implements OnC
         super.onCreate(bundle);
 
         setContentView(R.layout.activity_entfernung_von_berlin);
-
 
         // Achtung: FragmentManager aus Paket "android.support.v4.app", nicht den aus Paket "android.app" !!!
         FragmentManager fragmentManager = getSupportFragmentManager();

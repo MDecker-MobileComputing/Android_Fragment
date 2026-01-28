@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Fragmente-Demo"
+rootProject.name = "Fragment-Demo"
 include ':app'

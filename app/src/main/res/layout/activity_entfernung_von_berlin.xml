@@ -2,22 +2,23 @@
 <RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <fragment
-	android:id="@+id/fragment_koordinate"
-        android:name="de.mide.android.fragmente.KoordinatenFragment"
-    	android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:layout_marginTop="5dp"  />
+        android:id="@+id/fragment_koordinate"
+            android:name="de.mide.android.fragmente.KoordinatenFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"  />
 
     <Button
-	android:id="@+id/button_berechne_entfernung_zu_berlin"
-        android:layout_width="match_parent"
-    	android:layout_height="wrap_content"
-    	android:layout_marginTop="10dp"
-    	android:layout_below="@id/fragment_koordinate"
-    	android:text="@string/button_berechnung_durchfuehren" />
+        android:id="@+id/button_berechne_entfernung_zu_berlin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/fragment_koordinate"
+            android:text="@string/button_berechnung_durchfuehren" />
             
 </RelativeLayout>
 

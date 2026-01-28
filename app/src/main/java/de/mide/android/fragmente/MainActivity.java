@@ -1,12 +1,13 @@
 package de.mide.android.fragmente;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 /**
@@ -15,7 +16,7 @@ import android.widget.Button;
  *
  * This file is licensed under the terms of the BSD 3-Clause License.
  */
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends AppCompatActivity implements OnClickListener {
 
     public static String TAG4LOGGING = "Fragmente_Demo";
 
@@ -34,6 +35,8 @@ public class MainActivity extends Activity implements OnClickListener {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setTitle( R.string.app_name );
 
         _berechneEntfernungNachBerlinButton = findViewById(R.id.button_entfernung_zu_berlin);
         _berechneEntfernungNachBerlinButton.setOnClickListener(this);

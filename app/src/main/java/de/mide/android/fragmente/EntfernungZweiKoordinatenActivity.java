@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 
@@ -19,7 +20,7 @@ import androidx.fragment.app.FragmentManager;
  *
  * This file is licensed under the terms of the BSD 3-Clause License.
  */
-public class EntfernungZweiKoordinatenActivity extends FragmentActivity implements OnClickListener {
+public class EntfernungZweiKoordinatenActivity extends AppCompatActivity implements OnClickListener {
 
     /** Button zur Durchführung der eigentlichen Berechnung. */
     protected Button _berechnungDurchfuehrenButton = null;
