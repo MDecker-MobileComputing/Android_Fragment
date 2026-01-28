@@ -12,21 +12,13 @@ import android.widget.Button;
 import android.widget.Toast;
 
 
-/**
- * Diese Activity dient zur Berechnung der Entfernung der mit EINER Instanz
- * des Fragments eingegebenen Koordinate zu Berlin.<br><br>
- *
- * This file is licensed under the terms of the BSD 3-Clause License.
- */
-public class EntfernungVonBerlinActivity extends AppCompatActivity implements OnClickListener {
+public class EntfernungVonBerlinActivity extends AppCompatActivity
+                                         implements OnClickListener {
 
-    /** Fragment zur Eingabe einer geographischen Koordinate. */
     protected KoordinatenFragment _koordinatenFragment = null;
 
-    /** Button zum Start der Berechnung. */
     protected Button _berechnungDurchfuehrenButton = null;
 
-    /** Objekt mit den Koordinaten von Berlin. */
     protected Location _berlinLocation = null;
 
 
@@ -50,6 +42,13 @@ public class EntfernungVonBerlinActivity extends AppCompatActivity implements On
         _berechnungDurchfuehrenButton = findViewById(R.id.button_berechne_entfernung_zu_berlin);
         _berechnungDurchfuehrenButton.setOnClickListener(this);
 
+        Button zurueckButton = findViewById( R.id.button_zurueck_von_berlin );
+        zurueckButton.setOnClickListener( new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // Location-Objekt mit Koordinaten von Berlin erzeugen (52° 31'7" North, 13° 24' 29" East)
         _berlinLocation = new Location("dummy-provider");

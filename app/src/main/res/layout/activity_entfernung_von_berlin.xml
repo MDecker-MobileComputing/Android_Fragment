@@ -7,18 +7,26 @@
 
     <fragment
         android:id="@+id/fragment_koordinate"
-            android:name="de.mide.android.fragmente.KoordinatenFragment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"  />
+        android:name="de.mide.android.fragmente.KoordinatenFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"  />
 
     <Button
         android:id="@+id/button_berechne_entfernung_zu_berlin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/fragment_koordinate"
-            android:text="@string/button_berechnung_durchfuehren" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fragment_koordinate"
+        android:text="@string/button_berechnung_durchfuehren" />
+
+    <Button
+        android:id="@+id/button_zurueck_von_berlin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/button_berechne_entfernung_zu_berlin"
+        android:text="@string/button_zurueck" />
             
 </RelativeLayout>
 

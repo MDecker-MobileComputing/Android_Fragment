@@ -12,7 +12,7 @@
     <string name="button_entfernung_zwischen_zwei_koordinaten" >Berechne Entfernung zwischen zwei Orten</string>
 
     <string name="button_berechnung_durchfuehren">Berechnung durchführen</string>
-
+    <string name="button_zurueck">Zurück</string>
 
     <!-- Von Fragment verwendete Strings -->
     <string name="radiobutton_ost" >Ost</string>

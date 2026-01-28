@@ -33,6 +33,14 @@
 		    	android:layout_below="@id/fragment_koordinate_2"
 		    	android:text="@string/button_berechnung_durchfuehren" />
 
+            <Button
+                android:id="@+id/button_zurueck_von_zwei_orten"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/button_berechne_entfernung_zwischen_zwei_koordinaten"
+                android:text="@string/button_zurueck" />
+
     </LinearLayout>
 
 </ScrollView>

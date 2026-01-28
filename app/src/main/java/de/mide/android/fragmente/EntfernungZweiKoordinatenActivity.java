@@ -46,7 +46,16 @@ public class EntfernungZweiKoordinatenActivity extends AppCompatActivity impleme
         // Button initialisieren
         _berechnungDurchfuehrenButton = findViewById(R.id.button_berechne_entfernung_zwischen_zwei_koordinaten);
         _berechnungDurchfuehrenButton.setOnClickListener(this);
-        
+
+        Button zurueckButton = findViewById( R.id.button_zurueck_von_zwei_orten );
+        zurueckButton.setOnClickListener( new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+
         // Achtung: FragmentManager aus Paket "android.support.v4.app", nicht den aus Paket "android.app" !!!
         FragmentManager fragmentManager = getSupportFragmentManager();
         _koordinatenFragment1 = (KoordinatenFragment) fragmentManager.findFragmentById(R.id.fragment_koordinate_1);
