@@ -2,19 +2,19 @@
 
 <br>
 
-Simple Android app that shows how to use [fragments](https://developer.android.com/guide/components/fragments). 
-Fragments are re-usable UI components consisting of several view elements.
-The fragment in this example is for entering one geographic coordinate (e.g. 51.507222° North and 0.1275° West for
-[London](https://tools.wmflabs.org/geohack/geohack.php?pagename=London&params=51_30_26_N_0_7_39_W_region:GB_type:city(8825000))). 
+Dieses Repository enthält ein Android-Studio-Projekt für eine native Android-App mit Java, die
+die Verwendung von [Fragmenten](https://developer.android.com/guide/components/fragments)
+demonstriert.
+Fragmente sind wiederverwendbare UI-Komponenten, die aus verschiedenen UI-Elementen bestehen und
+auch eigene Logik enthalten können.
+Im vorliegenden Fall wird ein Fragment gezeigt, in das man geografische Koordinaten
+(z.B. 51.507222° N and 0.1275° W für
+[London](https://tools.wmflabs.org/geohack/geohack.php?pagename=London&params=51_30_26_N_0_7_39_W_region:GB_type:city(8825000))) eingeben kann.
 
 <br>
 
-Identifiers (names for classes, variables and methods), UI text and (JavaDoc) comments are in German only.
 
-<br>
-
-See also [this repository](https://github.com/MDecker-MobileComputing/Android_Kalorienrechner) for 
-another example on how to use fragments in an Android app.
+Siehe auch [dieses Repo](https://github.com/MDecker-MobileComputing/Android_Kalorienrechner) für eine andere Beispiel-App zu Fragmenten.
 
 <br>
 
@@ -27,10 +27,6 @@ another example on how to use fragments in an Android app.
 ![Screenshot 1](screenshot_1.png) &nbsp; ![Screenshot 2](screenshot_2.png)
 
 ![Screenshot 3](screenshot_3.png)
-
-<br>
-
-The screenshots were taken from the app running in the Android SDK's emulator.
 
 <br>
 
